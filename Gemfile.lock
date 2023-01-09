@@ -140,6 +140,7 @@ GEM
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.4.5)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -202,8 +203,6 @@ GEM
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
     spring (4.1.0)
-    sqlite3 (1.5.4)
-      mini_portile2 (~> 2.8.0)
     thor (1.2.1)
     timeout (0.3.1)
     tzinfo (2.0.5)
@@ -232,13 +231,13 @@ DEPENDENCIES
   devise-jwt
   dotenv-rails
   listen (>= 3.0.5)
+  pg
   pry
   puma
   rack-cors
   rails (~> 7.0.4)
   rspec-rails (~> 6.0.0)
   spring
-  sqlite3
   tzinfo-data
 
 RUBY VERSION
