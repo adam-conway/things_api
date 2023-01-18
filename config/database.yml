@@ -8,12 +8,13 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  host: localhost
 
 development:
   <<: *default
   database: things_api_development
-  username: postgres
-  password: postgres
+  username: <%= ENV.fetch("PG_USERNAME") %>
+  password: <%= ENV.fetch("PG_PASSWORD") %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -21,8 +22,8 @@ development:
 test:
   <<: *default
   database: things_api_test
-  username: postgres
-  password: postgres
+  username: <%= ENV.fetch("PG_USERNAME") %>
+  password: <%= ENV.fetch("PG_PASSWORD") %>
 
 production:
   <<: *default
