@@ -23,10 +23,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Setup Ruby
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '3.2'
+      - name: Setup Ruby, JRuby and TruffleRuby
+        uses: ruby/setup-ruby@v1.133.2
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
