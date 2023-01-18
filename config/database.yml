@@ -21,6 +21,8 @@ development:
 test:
   <<: *default
   database: things_api_test
+  username: postgres
+  password: postgres
 
 production:
   <<: *default
