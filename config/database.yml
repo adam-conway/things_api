@@ -13,8 +13,8 @@ default: &default
 development:
   <<: *default
   database: things_api_development
-  username: <%= ENV.fetch("PG_USERNAME") %>
-  password: <%= ENV.fetch("PG_PASSWORD") %>
+  username: username
+  password: password
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
