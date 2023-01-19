@@ -16,7 +16,7 @@ RSpec.describe "Registrations", type: :request do
                 post "/users", params: {bad: "data"}
 
                 expect(response.status).to eq(200)
-                expect(response.body).to eq("{\"message\":\"this is a test. Email can't be blank and Password can't be blank\"}")
+                expect(response.body).to eq("{\"message\":\"Sign up failure. Email can't be blank and Password can't be blank\"}")
             end
         end
     end
