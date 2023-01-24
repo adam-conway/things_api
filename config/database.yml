@@ -28,3 +28,4 @@ test:
 production:
   <<: *default
   database: things_api_production
+  url: <%= ENV.fetch("DATABASE_URL") %>
