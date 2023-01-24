@@ -1,6 +1,6 @@
 databases:
   - name: things_api_production
-    databaseName: postgres
+    databaseName: things_api_production
     user: admin
 
 services:
@@ -12,7 +12,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: postgres
+          name: things_api_production
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
